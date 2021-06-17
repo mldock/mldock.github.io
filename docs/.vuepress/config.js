@@ -57,6 +57,7 @@ module.exports = {
           children: [
             './',
             'quickStart',
+            'coreConcepts',
             'contributing'
           ]
         },
