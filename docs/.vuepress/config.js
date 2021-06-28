@@ -57,6 +57,8 @@ module.exports = {
           children: [
             './',
             'quickStart',
+            'coreConcepts',
+            'platforms',
             'contributing'
           ]
         },
@@ -67,7 +69,8 @@ module.exports = {
             '../cli/container',
             '../cli/local',
             '../cli/registry',
-            '../cli/configure'
+            '../cli/configure',
+            '../cli/templates'
           ]
         }
       ],
@@ -79,7 +82,8 @@ module.exports = {
             'container',
             'local',
             'registry',
-            'configure'
+            'configure',
+            'templates'
           ]
         }
       ]
