@@ -48,39 +48,6 @@ Will create your new project based on an previous template or project
 
 :::
 
-
-## Create Template
-
-```bash
-usage: mldock container create_template [--dir <path>] [--name <text>]
-                                    [--out <path>]
-```
-
-#### Description
-`Create a MLDOCK enabled container template.`
-
-`Tnitialize MLDOCK enabled container`
-
-#### Options
-
-`--dir` Path to MLDOCK container project directory.
-
-`--name` Name of new template to create.
-
-`--out` Path to save MLDOCK container template to.
-
-::: details
-Given 
-
-```mldock --dir=my-container-project --name=awesome-template --out=./my_templates```
-
-Would yield a MLDOCK template 
-
-```./my_templates/awesome-template```
-
-To create a new project from your template see [Initialize Project](./container.html#initialize).
-:::
-
 ## Update
 
 ```bash
