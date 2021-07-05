@@ -5,7 +5,7 @@ As Data Scientists, docker can be both a huge enabler and a huge headache. And i
 Questions like .. "Which server, where to serve, how to maintain the code, how to maintain the model..." become huge set of hurdles to overcome. Nevermind the challenges of validating experiments, analyzing performance and generating insights for better algorithms. :microscope:
 
 That is why we built MLDOCK. **To support the development of machine learning and enable you to get more models to production, faster and easier**.
-AT MLDOCK aour goal is to provide tools that help you **"Build local, Deploy everywhere"**. :whale:, so that you:
+AT MLDOCK our goal is to provide tools that help you **"Build local, Deploy everywhere"**. :whale:, so that you:
 
 - :heavy_check_mark: Spend more time validating :balance_scale:, experimenting :alembic: and getting new features in to production :
 - :x: lose far less hours :stopwatch: struggling with bash scripts
