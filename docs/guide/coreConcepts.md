@@ -49,9 +49,9 @@ This extends the base environment and adds special environment variables to mana
 | **ENV VAR Prefix Regex** | **Use Case** |
 |--|--|
 | `MLDOCK_INPUT_CHANNEL_.*` | Providing input assets for your model container runtime, e.g. Providing training data stored in s3 for your model, `MLDOCK_INPUT_CHANNEL_TRAIN=s3://bucket/path/to/directory/containing/data` |
-| `MLDOCK_INPUT_MODEL_CHANNEL_.*` | Providing a pre-trained model or previously trained model checkpoint for container runtime, e.g. If stored in s3 this could be: `MLDOCK_INPUT_MODEL_CHANNEL_RESNET=s3://bucket/path/to/directory/containing/resnet/model` |
+| `MLDOCK_MODEL_INPUT_CHANNEL_.*` | Providing a pre-trained model or previously trained model checkpoint for container runtime, e.g. If stored in s3 this could be: `MLDOCK_MODEL_INPUT_CHANNEL_RESNET=s3://bucket/path/to/directory/containing/resnet/model` |
 | `MLDOCK_OUTPUT_CHANNEL_.*` | Instructing mldock where upload resulting assets from training completion, e.g. If using s3 as your remote it could look like this: `MLDOCK_INPUT_CHANNEL_TRAIN=s3://bucket/path/to/directory/to/upload/output/data` |
-| `MLDOCK_OUTPUT_MODEL_CHANNEL_.*` | Instructing mldock where upload completed or trained model assets on training completion, e.g. If using s3 as your remote it could look like this: `MLDOCK_OUTPUT_MODEL_CHANNEL_MYMODEL=s3://bucket/path/to/directory/containing/mymodel/model` |
+| `MLDOCK_MODEL_OUTPUT_CHANNEL_.*` | Instructing mldock where upload completed or trained model assets on training completion, e.g. If using s3 as your remote it could look like this: `MLDOCK_MODEL_OUTPUT_CHANNEL_MYMODEL=s3://bucket/path/to/directory/containing/mymodel/model` |
 
 ::: tip
 Please note in the local CLI all environment variables provided in the `mldock.json` configuration are prefixed with `MLDOCK_` automatically before being passed in to the container environment. In production, you would do this prefixing manually. E.g. Say you wanted to pass a flag to disable CSV headers, called `HEADERS=false`, finding them in the MLDOCK container would mean looking for `MLDOCK_HEADERS`. This just makes sure that ENV VARS for both MLDOCK Environment Variables and the Cloud Platform (Sagemaker, etc) Environment Variables can coexist.
