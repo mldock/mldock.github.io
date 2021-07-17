@@ -37,4 +37,4 @@ A key thing to note is that development (shown blue) is an iterative process. Wh
 
 We focused on **build local first approach**. Starting with a command line tool that uses the docker engine and tools but packs in ml focused conveniences so you don't have to write any new bash commands and code.
 
-![build-with-mldock](/images/build-with-mldock.png)
+![build-with-mldock](/images/build-with-mldock-fully-featured.png)
