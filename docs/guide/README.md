@@ -16,53 +16,25 @@ AT MLDOCK our goal is to provide tools that help you **"Build local, Deploy ever
 
 ## Where does MLDOCK fit in?
 
+Below are the typical components of the production machine learning workflow. 
+
 ![ml-development-workflow](/images/ml-development-workflow.png)
 
-The typical production machine learning workflow comprises, speaking broadly, of the following:
-1. **Prepare** - Preparing data.
-2. **Build** - Developing an algorithm.
-3. **Experiment** - Running Experiments.
-4. **Deploy** - Deploying to production.
-5. **Monitor** - Monitoring ML service and model performance
+MLDOCK focuses on the problems associated with building an ML container and deploying it. This is achieved by providing a development environment where you can iterate in developing the training and prediction code. And then when you're happy, MLDOCK provides tooling to build and push your MLDOCK model container to the cloud container registry of your choice.
 
-### We want to bridge the gap... :rainbow:
+![ml-development-workflow](/images/ml-development-workflow-mldock-fits-in.png)
 
-In our modern world there are many options, opinions and solutions to getting to production. The most prominent platforms tend to either start at the experimentation side, hoping to help you iterate ideas faster, or start on the production side, putting all their attention to helping you run your ML code on a computer in the cloud. With all this power comes great complexity however, and can mean getting started :checkered_flag: :car: with ml in production can still mean months of work.
+MLDOCK supports this movev from build to deploy by providing:
+1. Quick start container templates (red)
+2. Docker-based development (blue)
+3. Cloud SDK enabled to interact with cloud registry (yellow)
 
-We want to build tooling that bridges the gap, allowing you to add any tools to support the various parts of your ML workflow and then finally deploy to any cloud platform.
+![mldock features development phase](/images/mldock-features-development-phase.png)
 
-![ml ecosystem with mldock](/images/ml-ecosystem-w-mldock.png)
-
-### We see things differently... :rocket:
-
-At MLDOCK we see things differently, we want to provide development tooling that connects all the aspects of machine learning toegether. :eyes: Focusing on ease of development while allowing you to deploy :rocket: to any cloud platform your heart desires. At MLDOCK, we think of ML applications in a similar light to web applications or backend server applications. At MLDOCK, our goal is to provide open-source, agnostic tooling so that you can start simply and build on top of it as your need grows.
-
-![mldock is inspired by](/images/mldock-analogs.png)
-
-Inspired by web development community tooling such as [Laravel](https://laravel.com/) and [Nuxt](https://nuxtjs.org/). And building on the awesome work done by [Amazon Sagemaker](https://aws.amazon.com/sagemaker/), [Sagemaker Training Toolkit](https://github.com/aws/sagemaker-training-toolkit) and [Sagify](https://github.com/Kenza-AI/sagify) we felt a tool was needed to provide a true seamless local development experience which lined up well with how models could be deployed in production.
+A key thing to note is that development (shown blue) is an iterative process. Where tweaking your scripts to work may mean building and running many times. But no worries, MLDOCK is here to make it as painless as possible.
 
 ## Develop locally, deploy Everywhere
 
 We focused on **build local first approach**. Starting with a command line tool that uses the docker engine and tools but packs in ml focused conveniences so you don't have to write any new bash commands and code.
 
 ![build-with-mldock](/images/build-with-mldock.png)
-
-#### Going from build to deploy
-
-From here you can trust that your container will be stable and production ready out the box. A true local development experience in which you **Build** local and **Deploy** to the cloud.
-
-![Build-to-deploy](/images/Build-to-deploy.png)
-
-#### Deploy everywhere
-
-We mean this in the truest sense. Where most platforms try to lock you in to their eco-system, MLDOCK gives you robust portability to be able to deploy your code anywhere. Train on a fully managed serverless service and deploy to any other container service as you need. The goal of MLDOCK is to provide a system that supports this portability :tada:
-
-We currently support many of the top machine learning cloud platforms and are adding new platforms in an on going process. 
-
-
-![deploy-w-mldock](/images/deploy-w-mldock.png)
-
-::: tip
-Find out more, see our full list of [supported cloud platforms](platforms.html)
-
-:::

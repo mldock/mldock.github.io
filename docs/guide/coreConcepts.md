@@ -1,12 +1,53 @@
 # Core Concepts
 
-To achieve our goal of **"build local, deploy everywhere"** we strove to provide a rich set of tooling, modules and an extensible design system that connected the desperate parts of machine learning in production. Even leveraging docker these set of tasks were tricky and naunced depending on what kind of algorithm and where we planned to deploy it.
+To achieve our goal of **"build local, deploy everywhere"**, MLDOCK brings together docker and cloud SDK's to help you develop and put your model in the cloud. For extra convenience, MLDOCK throws in container templating and a self-standing container life-cycle runtime.
 
-In our experience, getting machine learning to production meant solving the following challenges:
+![mldock full features](/images/mldock-full-features.png)
 
-![mldock-core-functions](/images/mldock-core-functions.png)
+Everything said this helps to provide an iterable environment for developing locally and then allows you to build and deploy a container that runs on your chosen cloud container service.
 
-As MLDOCK is a docker-based tool, it solves the these challenges by leveraging the standard docker API's (build, run, etc). Ofcourse the most powerful of the docker functionality is the ability to encapsulate everything an application needs to run in to a single container project ie. providing and running scripts, deploying a server to deploy your code, passing parameters to scripts through environment variables and command line arguments. To satisfy the rest of the requirements and bring it all together, MLDOCK provides a design system for container life-cycle management.
+## Local first development
+
+Starting with local development has many benefits, a few of which are:
+1. the cost of bugs
+2. the cost of resources
+3. loss of flexibility
+
+![why local development](/images/mldock-presentation-why-local-development.jpg)
+
+::: tip
+Taking a note from app developers, think of validating our set up and our code in a CI/CD process. This will lead to less :bug: bugs in production, leading to less fires :fire:
+:::
+
+## Container Templates
+
+Templates, better known as boilerplate code, allow developers to start quickly without having to write or copy and paste code from other sources like code blogs or stackoverflow. Put simply templates let you start from something and then only change what you need to make your code work.
+
+MLDOCK leverages templates through the [container initialization commands](./container.html#initialize) to build new containers. This becomes a power tool when given the fact that MLDOCK allows developers to create their own mldock-ready templates using [templates create](./templates.html#create). Where an mldock-ready container basically requires a specific directory structure, namely the `src/` and `src/container/` directories.
+
+A typical MLDOCK container project has the following project structure for code:
+
+``` bash
+your_container_project_directory/
+    └── src
+        ├── prediction.py
+        ├── trainer.py
+        └── container/
+           ├── Dockerfile
+           ├── assets.py
+           ├── executor.sh
+           ├── prediction/
+           │   ├── nginx.conf
+           │   ├── predictor.py
+           │   ├── serve.py
+           │   └── wsgi.py
+           └── training/
+               └── train.py
+```
+
+::: tip
+MLDOCK allows you to create a new mldock-ready template from a working container. To find our more, check [templates create](./templates.html#create).
+:::
 
 ## Container Life-Cycle Management
 

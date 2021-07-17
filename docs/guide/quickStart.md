@@ -4,12 +4,12 @@ MLDOCK is built for getting started quickly. The command line tool comes with he
 
 To get started creating your first MLDOCK ready container image do the following:
 
-## Getting Started
+## Get Started
 
-## Set up your environment
+### Set up your environment
 
 1. (Optional) Use virtual environment to manage dependencies.
-2. Install `dotenv` to easily manage environment.
+2. (Optional) Install `dotenv` to easily manage environment.
 
 ```
 pip install --user python-dotenv[cli]
@@ -40,12 +40,8 @@ dotenv -f "/path/to/.env" run mldock local build --dir <my-project-path>
 ```
 :::
 
-
-## Overview of MLDock command line
-
-Check out the [mldock command line reference](../cli)
-
-## Create your first container image project
+## Develop locally
+### Create your first container image project
 1. Install MLDock
 
 The pip install is the only supported package manager at present. It is recommended that you use an environment manager, either virtualenv or conda will work.
@@ -54,22 +50,20 @@ The pip install is the only supported package manager at present. It is recommen
 pip install mldock[cli]
 ```
 
-2. Create an empty directory
-
-```bash
-mkdir my_ml_container
-```
-
 2. Initialize or create your first container
 
 You will see a some of prompts to set up container.
 
 ```bash
-mldock container init --dir my_ml_container
+mldock container init --dir my_ml_container --no-prompt --template=generic
 ```
 
+::: details
+Check out the [mldock command line reference](../cli) for available commands.
+:::
+
 ::: tip
-Just hit Return/Enter to accept all the defaults.
+Just hit Return/Enter and MLDOCK will prompt you as required.
 :::
 
 3. Build your container image locally
