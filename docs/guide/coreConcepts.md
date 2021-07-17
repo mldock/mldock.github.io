@@ -1,6 +1,6 @@
 # Core Concepts
 
-To achieve our goal of **"build local, deploy everywhere"**, MLDOCK brings together docker and cloud sdks to help you develop and put your model in the cloud. For extra convenience, MLDOCK throws in container templating and a self-standing container life-cycle runtime.
+To achieve our goal of **"build local, deploy everywhere"**, MLDOCK brings together docker and cloud SDK's to help you develop and put your model in the cloud. For extra convenience, MLDOCK throws in container templating and a self-standing container life-cycle runtime.
 
 ![mldock full features](/images/mldock-full-features.png)
 
@@ -16,7 +16,7 @@ Starting with local development has many benefits, a few of which are:
 ![why local development](/images/mldock-presentation-why-local-development.jpg)
 
 ::: tip
-Taking a note from app developers, we should think of validating our set up and our code in a CI/CD process. This will lead to less :bug: bugs in production, leading to less fires :fire:
+Taking a note from app developers, think of validating our set up and our code in a CI/CD process. This will lead to less :bug: bugs in production, leading to less fires :fire:
 :::
 
 ## Container Templates
