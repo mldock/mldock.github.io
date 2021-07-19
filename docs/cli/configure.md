@@ -5,6 +5,15 @@
 
 This collection of commands helps to configure your CLI for development. It includes setting up Authentication in-line with cloud vendor command line tools and also provides an approach to set static environment variables such as those required by these cloud vendor CLI tools.
 
+## Init
+
+```bash
+usage: mldock configure init
+```
+
+#### Description
+`Used to create a new MLDOCK CLI configuration. Run this in a new repository.`
+
 ## Local
 
 ```bash
